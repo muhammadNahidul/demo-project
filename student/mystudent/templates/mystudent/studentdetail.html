@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Detail</h1>
+    <div>
+        <a href="{% url 'student-list' %}">Back to Student list</a>
+    </div>
+    
+    <div>
+        <h4>Name: {{student.name}} </h4>
+        <p>Roll: {{student.roll}}</p>
+        <p>Email: <strong> {{student.email}} </strong></p>
+    </div>
+    <div>
+        <a href="{% url 'delete-student' student.pk %}">Delete</a>
+        <a href="{% url 'student-update' student.pk %}">Edit</a>
+
+    </div>
+
+</body>
+</html>
