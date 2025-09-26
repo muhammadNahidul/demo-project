@@ -11,5 +11,8 @@
           <a href="{% url 'student-detail' student.pk %}"><li> {{student.name}} </li></a>
         {% endfor %}
     </ul>
+    <div>
+        <a href="{% url 'student-form' %}">add new student</a>
+    </div>
 </body>
 </html>
